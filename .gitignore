@@ -15,6 +15,5 @@ debug
 # compiled file
 server
 
-pkg
-bin
-src
+# docker compose
+docker-compose.yaml
