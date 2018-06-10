@@ -19,7 +19,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	logouturl.Path += "/v2/logout"
 	parameters := url.Values{}
-	parameters.Add("returnTo", os.Getenv("AUTH0_CALLBACK_URL"))
+	parameters.Add("returnTo", os.Getenv("AUTH0_BASE_URL"))
 	parameters.Add("client_id", os.Getenv("AUTH0_CLIENT_ID"))
 	logouturl.RawQuery = parameters.Encode()
 
