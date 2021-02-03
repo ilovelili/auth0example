@@ -17,8 +17,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	aud := os.Getenv("AUTH0_AUDIENCE")
 
 	conf := &oauth2.Config{
-		ClientID:     os.Getenv("AUTH0_CLIENT_ID"),
-		ClientSecret: os.Getenv("AUTH0_CLIENT_SECRET"),
+		ClientID:     "gI6Q1OqTtASpXhIt7SG5DHVAe8RyJgfP",
+		ClientSecret: "ZklUuN_qKEFPevKb0s6VO1jdHlB8TzGGYQnqyKjY6yl2TggDj2z-yvyY6Wyy0S63",
 		RedirectURL:  os.Getenv("AUTH0_CALLBACK_URL"),
 		Scopes:       []string{"openid", "profile", "email"},
 		Endpoint: oauth2.Endpoint{

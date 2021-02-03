@@ -20,7 +20,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	logouturl.Path += "/v2/logout"
 	parameters := url.Values{}
 	parameters.Add("returnTo", os.Getenv("AUTH0_BASE_URL"))
-	parameters.Add("client_id", os.Getenv("AUTH0_CLIENT_ID"))
+	parameters.Add("client_id", "gI6Q1OqTtASpXhIt7SG5DHVAe8RyJgfP")
 	logouturl.RawQuery = parameters.Encode()
 
 	http.Redirect(w, r, logouturl.String(), http.StatusTemporaryRedirect)

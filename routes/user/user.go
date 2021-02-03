@@ -15,5 +15,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	templates.RenderTemplate(w, "user", session.Values["profile"])
+	templates.RenderTemplate(w, "user", struct {
+		Profile interface{}
+		IDToken interface{}
+	}{
+		Profile: session.Values["profile"],
+		IDToken: session.Values["id_token"],
+	})
 }
